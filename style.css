@@ -297,7 +297,7 @@ nav ul li a:hover {
     margin-bottom: 25px;
     opacity: 0.9;
 }
-.btn-primary {
+/* .btn-primary {
     display: inline-block;
     padding: 14px 32px;
     background:rgba(255, 255, 255, 0.2);
@@ -314,7 +314,7 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.35);
     border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
-}
+} */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -363,21 +363,14 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .hero-arrow {
-        width: 50px;
-        height: 50px;
-    }
-    .left-arrow {
-        left: 15px;
-    }
-    .right-arrow {
-        right: 15px;
+        display: none;
     }
 }
 
 /* HERO DOTS INDICATOR */
 .hero-dots {
     position: absolute;
-    bottom: 30px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -407,7 +400,7 @@ nav ul li a:hover {
 /* Mobile: Dots lebih kecil */
 @media (max-width: 768px) {
     .hero-dots {
-        bottom: 20px;
+        bottom: -15px;
         gap: 10px;
     }
     .hero-dot {
@@ -615,14 +608,14 @@ footer {
     transition: opacity 1.2s ease-out, visibility 1.2s ease-out;
 }
 
-.preloader::before {
+/* .preloader::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(8px);
-}
+} */
 
 .preloader.hidden {
     opacity: 0;
@@ -714,7 +707,6 @@ footer {
     .wa-float {
         bottom: 20px;
         right: -10px;
-        padding: 10px 16px;
         min-width: 60px;
     }
     .wa-text {
@@ -724,5 +716,9 @@ footer {
     .wa-icon {
         width: 30px;
         height: 30px;
+    }
+    .wa-float:hover {
+        background: transparent;
+        box-shadow: none;
     }
 }
