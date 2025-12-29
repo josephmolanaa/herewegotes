@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HereWego</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.cdnfonts.com/css/cocogoose-pro?styles=17441" rel="stylesheet"/>
+    <link href="https://fonts.cdnfonts.com/css/gc-palioka" rel="stylesheet"/>
+</head>
+<body>
+    <!-- PRELOADER/ LOADING SCREEN-->
+    <div class=" preloader">
+        <div class="loader">
+            <img src="IMAGES/LOGO NAVYBLUE PNG.png" class="logo-breath" alt="HereWeGo Logo">
+        </div>
+    </div>    
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                 <a href="#hero" class="logo-link"> 
+                    <img src="IMAGES/LOGO TYPOGRP 1.png" class="logo-navbar" alt="HereWeGo Logo">
+                </a> 
+            </div>
+        </div>
+
+            <button class="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span> 
+                <span class="bar"></span> 
+                <span class="bar"></span> 
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#info">Info</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+   <section id="hero" class="hero">
+    <div class="hero-slideshow">
+        <img src="IMAGES/unnamed.jpg" class="hero-slide active">
+        <img src="IMAGES/unnamed (1).jpg" class="hero-slide">
+        <img src="IMAGES/unnamed (2).jpg" class="hero-slide">
+    </div>
+
+    <!-- <button class="hero-arrow left-arrow" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" width="40" height="40">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <button class="hero-arrow right-arrow" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" width="40" height="40">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/>
+        </svg>
+    </button> -->
+
+    <div class="hero-dots">
+
+    </div>
+
+    <div class="hero-content">
+        <h1>Explore The Hidden Beauty</h1>
+        <p>Discover forests, coastlines, waterfalls and unforgettable experiences.</p>
+        <a href="newpage.html" class="btn-primary">Start Journey</a>
+    </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations" class="destinations">
+        <h2>Top Destinations</h2>
+
+        <div class="dest-grid">
+            <div class="dest-card fade">
+                <img src="IMAGES/unnamed.jpg" />
+                <h3>Emerald Forest</h3>
+                <p>A stunning forest filled with wildlife and adventure hiking trails.</p>
+            </div>
+
+            <div class="dest-card fade">
+                <img src="IMAGES/unnamed (1).jpg" />
+                <h3>Crystal Coast</h3>
+                <p>Clear ocean water, smooth coastline, and amazing sunset views.</p>
+            </div>
+
+            <div class="dest-card fade">
+                <img src="IMAGES/unnamed (2).jpg" />
+                <h3>Mountain Ridge</h3>
+                <p>Perfect for hiking, camping, and breathtaking sky views.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery">
+        <h2>Travel Moments</h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-item"> <img class="fade" src="https://picsum.photos/300/300?5" /> </div>
+            <div class="gallery-item"> <img class="fade" src="https://picsum.photos/300/300?4" /> </div>
+            <div class="gallery-item"> <img class="fade" src="https://picsum.photos/300/300?6" /> </div>
+            <div class="gallery-item"> <img class="fade" src="https://picsum.photos/300/300?7" /> </div>
+            <div class="gallery-item"> <img class="fade" src="https://picsum.photos/300/300?8" /> </div>
+            <div class="gallery-item"> <img class="fade" src="https://picsum.photos/300/300?9" /> </div>
+        </div>
+    </section>
+
+    <!-- INFO -->
+    <section id="info" class="info">
+        <h2>Plan Your Visit</h2>
+        <p>Find the best time to visit, weather conditions, travel tips, and 
+           recommended routes to make your journey unforgettable.</p>
+        <a class="btn-primary" href="#">Learn More</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 HereWego. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/+628123351024" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+        <div class="wa-text">Chat with Us</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" class="wa-icon">
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>

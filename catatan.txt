@@ -1,0 +1,7 @@
+animasi awal loading home page
+slide ganti 5 foto + slide 5 foto kanan kiri
+hero page description change kata + foto
+product description
+highlight/animasi contoh hover + ganti ganti foto
+
+svelt
