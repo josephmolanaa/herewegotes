@@ -52,15 +52,6 @@ window.addEventListener("load", () => {
     const preloader = document.querySelector(".preloader");
     const body = document.body;
 
-    // setTimeout(() => {
-    //     document.getElementById("loading-text").classList.remove("hidden");
-    // }, 1000);
-
-    // setTimeout(() => {
-    //     document.getElementById("designer-text").classList.remove("hidden");
-    // }, 1800);
-
-    // Delay lebih lama biar efek breath logo keliatan full (4-5 detik)
     setTimeout(() => {
         preloader.classList.add("hidden");
         body.classList.add("loaded");
@@ -89,26 +80,26 @@ function prevSlide() {
 // Auto slideshow setiap 7 detik
 let autoSlideInterval = setInterval(nextSlide, 7000);
 
-// // Manual control dengan arrow
-// const leftArrow = document.querySelector(".left-arrow");
-// const rightArrow = document.querySelector(".right-arrow");
+// Manual control dengan arrow
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
 
-// if (rightArrow) {
-//     rightArrow.addEventListener("click", () => {
-//         nextSlide();
-//         // Reset timer auto biar nggak ganti tiba-tiba
-//         clearInterval(autoSlideInterval);
-//         autoSlideInterval = setInterval(nextSlide, 7000);
-//     });
-// }
+if (rightArrow) {
+    rightArrow.addEventListener("click", () => {
+        nextSlide();
+        // Reset timer auto biar nggak ganti tiba-tiba
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(nextSlide, 7000);
+    });
+}
 
-// if (leftArrow) {
-//     leftArrow.addEventListener("click", () => {
-//         prevSlide();
-//         clearInterval(autoSlideInterval);
-//         autoSlideInterval = setInterval(nextSlide, 7000);
-//     });
-// }
+if (leftArrow) {
+    leftArrow.addEventListener("click", () => {
+        prevSlide();
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(nextSlide, 7000);
+    });
+}
 
 // Tampilkan slide pertama saat load
 showSlide(heroIndex);
@@ -211,3 +202,4 @@ function resetAutoTimer() {
     clearInterval(autoSlideInterval);
     autoSlideInterval = setInterval(nextSlide, 7000);
 }
+
