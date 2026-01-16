@@ -243,6 +243,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
     color: #fdfaf6;
     line-height: 1.2;
+    font-family: 'GC Palioka', sans-serif; 
 }
 
 .detail-text p {
@@ -251,6 +252,11 @@ nav ul li a:hover {
     line-height: 1.8;
     margin-bottom: 30px;
     opacity: 0.8;
+    
+}
+
+.detail-text li {
+    font-family: 'GC Palioka', sans-serif;
 }
 
 /* LIST ITINERARY */

@@ -55,10 +55,10 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         preloader.classList.add("hidden");
         body.classList.add("loaded");
-    }, 5500); // Ubah ke 5500 kalau mau lebih lama lagi
+    }, 2500); // Ubah ke 5500 kalau mau lebih lama lagi
 });
 
-// HERO SLIDESHOW - AUTO + MANUAL ARROW (VERSI FINAL, NO DUPES)
+// HERO SLIDESHOW - AUTO + MANUAL ARROW
 const totalSlides = heroSlides.length;
 
 // Fungsi tampilkan slide

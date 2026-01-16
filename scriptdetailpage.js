@@ -33,48 +33,68 @@ if (hamburger && navMenu) {
 }
 
 
-// --- BAGIAN 2: LOGIKA ISI KONTEN DETAIL (Dinamis) ---
+// --- BAGIAN 2: LOGIKA ISI KONTEN DETAIL ---
 
-// Ambil parameter ?dest=... dari URL
 const params = new URLSearchParams(window.location.search);
-const dest = params.get('dest');
+const dest = params.get("dest");
+const tourIndex = parseInt(params.get("tour"), 0);
 
-// Data Tour (Pastikan path gambarnya pakai ../ karena file ini dipanggil dari dalam folder detail)
-const tourData = {
-    bromo: {
-        title: "Bromo Sunrise Tour",
-        desc: "Petualangan tak terlupakan menyaksikan sunrise dari puncak Penanjakan, jeep di lautan pasir, dan mendaki kawah Bromo aktif.",
-        img: "../IMAGES/unnamed.jpg", 
-        itinerary: ["Pick up hotel jam 1 pagi", "Jeep ke Penanjakan view point", "Sunrise hunting", "Lautan pasir & kawah Bromo", "Sarapan & kembali hotel"],
-        price: "Rp 850.000 / orang"
-    },
-    pantai: {
-        title: "Crystal Beach Escape",
-        desc: "Relaksasi di pantai air jernih, snorkeling, island hopping, dan sunset romantis.",
-        img: "../IMAGES/unnamed (1).jpg",
-        itinerary: ["Pick up hotel", "Snorkeling spot 1", "Island hopping", "Lunch seafood", "Sunset & kembali"],
-        price: "Rp 1.200.000 / orang"
-    },
-    gunung: {
-        title: "Mountain Trekking Adventure",
-        desc: "Pendakian gunung menantang dengan camping, sunrise puncak, dan pemandangan 360°.",
-        img: "../IMAGES/unnamed (2).jpg",
-        itinerary: ["Briefing & start trek", "Camp malam", "Summit attack jam 3 pagi", "Sunrise puncak", "Descent & kembali"],
-        price: "Rp 1.500.000 / orang"
-    },
-    rajaampat: {
-        title: "Raja Ampat Diving Paradise",
-        desc: "Surga diving dunia dengan biodiversitas laut tertinggi, liveaboard opsional.",
-        img: "../IMAGES/unnamed.jpg",
-        itinerary: ["Transfer bandara", "Check in resort", "3x dive/hari", "Night dive opsional", "Departure"],
-        price: "Rp 15.000.000 / 4 hari"
-    }
+const tourData = {        
+    CustomizedPrivateTripDetail: [
+        {
+            title: "TRIP 1",
+            desc: "DESC TRIP 1",
+            img: "https://picsum.photos/400/300?random=12",
+            itinerary: ["Opportunity 1", "Opportunity 2", "Opportunity 3", "Opportunity 4", "Opportunity 5"],
+            price: "Rp 9.999 / orang"
+        },
+        {
+            title: "TRIP 2",
+            desc: "DESC TRIP 2",
+            img: "https://picsum.photos/400/300?random=13",
+            itinerary: ["Opportunity 1", "Opportunity 2", "Opportunity 3", "Opportunity 4", "Opportunity 5"],
+            price: "Rp 9.999 / orang"
+        },
+        {
+            title: "TRIP 3",
+            desc: "DESC TRIP 3",
+            img: "https://picsum.photos/400/300?random=14",
+            itinerary: ["Opportunity 1", "Opportunity 2", "Opportunity 3", "Opportunity 4", "Opportunity 5"],
+            price: "Rp 9.999 / orang"
+        },
+        {
+            title: "TRIP 4",
+            desc: "DESC TRIP 4",
+            img: "https://picsum.photos/400/300?random=15",
+            itinerary: ["Opportunity 1", "Opportunity 2", "Opportunity 3", "Opportunity 4", "Opportunity 5"],
+            price: "Rp 9.999 / orang"
+        },
+    ],
+
+    CorporateMiceGroupTourDetail: [
+        {
+            title: "CORP TRIP 1",
+            desc: "DESC CORP TRIP 1",
+            img: "https://picsum.photos/400/300?random=16",
+            itinerary: ["Opportunity A", "Opportunity B", "Opportunity C", "Opportunity D", "Opportunity E"],
+            price: "Rp 9.999 / orang"
+        },
+    ]
 };
 
-// Pilih data berdasarkan URL, kalau salah fallback ke bromo
-const data = tourData[dest] || tourData.bromo; 
+const categoryArray = tourData[dest] || [];
+let data = categoryArray[tourIndex];
 
-// Masukkan data ke HTML
+if (!data) {
+    data = {
+        title: "Tour Not Found",
+        desc: "The requested tour could not be found.",
+        img: "https://picsum.photos/400/300?random=16",
+        itinerary: [],
+        price: "N/A"
+    };
+}
+
 if (document.getElementById("detail-title")) {
     document.getElementById("detail-title").textContent = data.title;
     document.getElementById("detail-desc").textContent = data.desc;
